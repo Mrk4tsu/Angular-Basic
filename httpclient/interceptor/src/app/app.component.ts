@@ -15,7 +15,7 @@ export class AppComponent {
   data: any
 
   getProduct() {
-    this.http.get('https://localhost:5000/api/productmanages/paging').subscribe(response => {
+    this.http.get('https://localhost:5000/api/productpublics/list').subscribe(response => {
       this.data = response;
     });
   }
