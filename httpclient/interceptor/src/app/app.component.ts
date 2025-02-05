@@ -1,6 +1,6 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 
 @Component({
@@ -9,9 +9,25 @@ import {CommonModule} from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent{
   private http = inject(HttpClient)
   data: any
+
+  get() {
+    const url = 'https://localhost:5000/api/productpublics/list';
+    let httpParams = new HttpParams();
+    httpParams = httpParams.set('KeyWord', '1');
+    httpParams = httpParams.set('CategoryId', '1');
+    const baseHeaders = new HttpHeaders().set('Custom-Header', 'Bearer token123');
+    const updatedHeaders = baseHeaders.set('Custom-Header', 'Bearer new_token');
+
+    this.http.get(url, {
+      headers: updatedHeaders,
+      params: httpParams
+    }).subscribe(response => {
+      this.data = response;
+    });
+  }
 
   getProduct() {
     let httpParams = new HttpParams();
