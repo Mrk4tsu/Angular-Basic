@@ -1,0 +1,7 @@
+<button (click)="getProduct()">
+  Get Data
+</button>
+<pre *ngIf="data">
+  {{ data | json }}
+</pre>
+<router-outlet/>
