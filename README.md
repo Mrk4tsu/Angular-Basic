@@ -16,5 +16,17 @@
 ### 3. Routing
 ### 4. Http Client
 ### 5. SSR
-
+- HTTP in Component
+- HTTP with Fetch
+- Functional vs DI-Based Interceptors
+- Fetch JSon, Images & More with Responsetype Magic
+- Url Params With HTTPParams & Object Literals
+- HTTP Request with Custom Paramcodec
+- Immutable HttpReaders
+- HTTPClient Observe
+- File Upload
+- File Upload With Progress
+- Fix Http Failures With Rxjs
+- Catch Error and Retry Request
+- 
  
