@@ -129,4 +129,5 @@ Angular.
     });
   }
 ```
+![Screenshot 2025-02-05 201838](https://github.com/user-attachments/assets/765d4ad7-570b-4b34-9a0f-83c25b8f5558)
 
