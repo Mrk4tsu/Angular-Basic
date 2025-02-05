@@ -1,0 +1,9 @@
+<h1>Fetch Data With HTTP</h1>
+
+<button (click)="getProductFetch()">
+  Get Data
+</button>
+<pre *ngIf="data">
+  {{data | json}}
+</pre>
+<router-outlet/>
